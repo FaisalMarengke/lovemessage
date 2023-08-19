@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: rgb(187, 7, 133);
+  border: 1px solid #adadad;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.love-message {
+  text-align: center;
+}
+
+.profile-picture {
+  margin-top: -50px;
+}
+
+.rounded-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+#message {
+  
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  animation: heartbeat 1s infinite;
+}
+
+#signature {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+#signature::before {
+  content: "Dari Faisal untuk Firdayanti";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.love-falling-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.love-falling-image {
+  position: absolute;
+  width: 30px;
+  animation: loveFalling 3s linear 3s forwards;
+  opacity: 1;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loveFalling {
+  0% {
+    transform: translateY(-50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+  </style>
+  <title>Love Message</title>
+</head>
+<body>
+  <div class="container">
+    <div class="love-message">
+      <div class="profile-picture">
+        <img src="profil.jpg" alt="Profile Picture" class="rounded-image" />
+      </div>
+      <p id="message">I love you, sayang</p>
+      <p id="signature">Dari Faisal untuk Firdayanti</p>
+      <div class="love-falling-container">
+        <img src="love.png" alt="Love" class="love-falling-image" />
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
